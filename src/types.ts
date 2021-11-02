@@ -8,15 +8,7 @@ export type ParserResultType =
   | "bytes"
   | "null";
 
-export interface IParserResult {
+export interface ParserResult {
   type: ParserResultType;
-  rawData: string | null;
-}
-
-export class ParserResult implements IParserResult {
-  constructor(public type: ParserResultType, public rawData: string | null) {}
-
-  get data(): DataType {
-    return [];
-  }
+  data: DataType;
 }
